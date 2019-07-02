@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/BackgroundGM"
+        tools:ignore="MissingConstraints">
+        <ImageView
+            android:id="@+id/headbackground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/caibeibeijing" />
+        <TextView
+            app:layout_constraintTop_toTopOf="parent"
+            android:textSize="16sp"
+            android:textColor="@color/colorBlack"
+            android:gravity="center"
+            android:id="@+id/title"
+            android:text="个人中心"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:layout_marginTop="5dp"
+            app:layout_constraintRight_toLeftOf="@id/rg"
+            app:layout_constraintTop_toBottomOf="@id/title"
+            android:src="@mipmap/xiaoxi"
+            android:id="@+id/message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:layout_marginTop="5dp"
+            app:layout_constraintRight_toLeftOf="@id/message"
+            app:layout_constraintTop_toBottomOf="@id/title"
+            android:src="@mipmap/shezhi"
+            android:layout_marginRight="10dp"
+            android:id="@+id/setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/head_img"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            app:layout_constraintTop_toBottomOf="@id/setting"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintLeft_toRightOf="@id/lg"
+             />
+
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:text="NAME"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toRightOf="@id/head_img"
+            app:layout_constraintTop_toTopOf="@id/head_img"
+            />
+
+        <TextView
+            android:id="@+id/detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:text="涂涂鸦创客中心"
+            android:textColor="@color/colorWhite"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@id/dou"
+            app:layout_constraintLeft_toRightOf="@id/head_img"
+            app:layout_constraintTop_toBottomOf="@id/name" />
+
+        <TextView
+            android:id="@+id/dou"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:text="智慧豆："
+            android:textColor="@color/colorWhite"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/head_img"
+            app:layout_constraintLeft_toRightOf="@id/head_img" />
+
+        <TextView
+            android:id="@+id/dousum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:text="11"
+            android:textColor="@color/colorWhite"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/head_img"
+            app:layout_constraintLeft_toRightOf="@id/dou" />
+        <TextView
+            android:background="@drawable/color_gm"
+            app:layout_constraintLeft_toRightOf="@id/dousum"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintBottom_toBottomOf="@id/dousum"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/scTitle"
+            android:text="充值"
+            android:id="@+id/bt_addbean"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <android.support.v7.widget.RecyclerView
+            app:layout_constraintTop_toBottomOf="@id/headbackground"
+            android:id="@+id/recycler"
+            app:layout_constraintLeft_toRightOf="@id/lg"
+            app:layout_constraintRight_toLeftOf="@id/rg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            />
+
+
+        <android.support.constraint.Guideline
+            android:id="@+id/headlg"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.1" />
+        <android.support.constraint.Guideline
+            android:id="@+id/lg"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.04" />
+        <android.support.constraint.Guideline
+            android:id="@+id/rg"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.96" />
+
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

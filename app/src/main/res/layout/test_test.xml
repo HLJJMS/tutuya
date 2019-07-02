@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.mall.prodectdetail.ProdectDetailActivity"
+    tools:ignore="MissingConstraints">
+
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/bt_buy"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/BackgroundGM"
+            tools:ignore="MissingConstraints">
+
+            <include
+                android:id="@+id/title"
+                layout="@layout/head_back" />
+
+            <TextView
+                android:id="@+id/bt_prodect"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:gravity="center"
+                android:text="商品"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/bt_comment"
+                app:layout_constraintTop_toBottomOf="@id/title" />
+
+            <TextView
+                android:id="@+id/bt_comment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:gravity="center"
+                android:text="评论"
+                app:layout_constraintLeft_toRightOf="@id/bt_prodect"
+                app:layout_constraintRight_toLeftOf="@id/bt_detail"
+                app:layout_constraintTop_toBottomOf="@id/title" />
+
+            <TextView
+                android:id="@+id/bt_detail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:gravity="center"
+                android:text="详情"
+                app:layout_constraintLeft_toRightOf="@id/bt_comment"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/title" />
+
+            <ImageView
+                android:id="@+id/lunbo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/linshilunbo"
+                app:layout_constraintTop_toBottomOf="@id/bt_comment" />
+
+            <TextView
+                android:id="@+id/txt_price_del"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/red"
+                android:padding="10dp"
+                android:text="京东价999"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/small"
+                app:layout_constraintTop_toBottomOf="@id/lunbo" />
+
+            <TextView
+                android:id="@+id/txt_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/red"
+                android:padding="10dp"
+                android:text="平台价999"
+                android:textColor="@color/colorWhite"
+                app:layout_constraintTop_toBottomOf="@id/txt_price_del" />
+
+            <TextView
+                android:id="@+id/txt_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:paddingStart="10dp"
+                android:paddingRight="80dp"
+                android:text="贝芬乐儿童电子琴初学带麦克风钢琴宝宝女男孩玩具1-3新年礼物"
+                app:layout_constraintRight_toLeftOf="@id/bt_collection"
+                app:layout_constraintTop_toBottomOf="@id/txt_price" />
+
+            <CheckBox
+                android:id="@+id/bt_collection"
+                style="@style/car"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleX="0.6"
+                android:scaleY="0.6"
+                android:text="收藏"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_price" />
+
+            <TextView
+                android:id="@+id/txt_selected"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorWhite"
+                android:padding="7dp"
+                android:text="已选  贝芬乐儿童电子琴初学带麦克风钢琴"
+                app:layout_constraintTop_toBottomOf="@id/txt_name" />
+
+            <TextView
+                android:id="@+id/color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:padding="7dp"
+                android:text="颜色"
+                app:layout_constraintTop_toBottomOf="@id/txt_selected" />
+
+            <TextView
+
+                android:id="@+id/number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:padding="7dp"
+                android:text="数量"
+                app:layout_constraintTop_toBottomOf="@id/color" />
+
+
+
+            <com.tutuya.tck.diyview.NumberView
+                app:layout_constraintBottom_toBottomOf="@id/number"
+                app:layout_constraintLeft_toRightOf="@id/color"
+                app:layout_constraintTop_toTopOf="@id/number"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp" />
+
+            <TextView
+                android:id="@+id/txt_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorWhite"
+                android:padding="7dp"
+                android:text="配送至 ： 北京市朝阳区四惠大厦"
+                app:layout_constraintTop_toBottomOf="@id/number" />
+
+            <TextView
+                android:id="@+id/txt_kg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:padding="7dp"
+                android:text="重量 ： 5KG"
+                app:layout_constraintTop_toBottomOf="@id/txt_address" />
+
+            <TextView
+                android:id="@+id/bt_comment_long"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorWhite"
+                android:padding="7dp"
+                android:text="评价"
+                app:layout_constraintTop_toBottomOf="@id/txt_kg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="好评98%"
+                android:textColor="@color/red"
+                android:textSize="@dimen/scTitle"
+                app:layout_constraintBottom_toBottomOf="@id/bt_comment_long"
+                app:layout_constraintLeft_toRightOf="@id/color"
+                app:layout_constraintTop_toTopOf="@id/bt_comment_long" />
+
+            <ImageView
+                android:id="@+id/go"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:padding="5dp"
+                android:src="@mipmap/icon_go"
+                app:layout_constraintBottom_toBottomOf="@id/bt_comment_long"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/bt_comment_long" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:paddingRight="5dp"
+                android:text="共100+评论"
+                android:textSize="@dimen/small"
+                app:layout_constraintBottom_toBottomOf="@id/bt_comment_long"
+                app:layout_constraintRight_toLeftOf="@id/go"
+                app:layout_constraintTop_toTopOf="@id/bt_comment_long" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/comment_rec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/bt_comment_long" />
+
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+    <TextView
+        app:layout_constraintHorizontal_weight="2"
+        android:padding="10dp"
+        android:id="@+id/txt_price_bottom"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:textColor="@color/red"
+        android:gravity="center"
+        android:text="￥999"
+        android:textSize="@dimen/big"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/bt_car"
+        />
+
+    <TextView
+        app:layout_constraintHorizontal_weight="1"
+        android:id="@+id/bt_car"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/red"
+        android:gravity="center"
+        android:text="购物车"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintTop_toTopOf="@id/txt_price_bottom"
+        app:layout_constraintBottom_toBottomOf="@id/txt_price_bottom"
+        app:layout_constraintLeft_toRightOf="@id/txt_price_bottom"
+        app:layout_constraintRight_toLeftOf="@id/bt_buy" />
+
+    <TextView
+        app:layout_constraintHorizontal_weight="1"
+        android:id="@+id/bt_buy"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorYellow"
+        android:gravity="center"
+        android:text="立即购买"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintLeft_toRightOf="@id/bt_car"
+        app:layout_constraintTop_toTopOf="@id/txt_price_bottom"
+        app:layout_constraintBottom_toBottomOf="@id/txt_price_bottom"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+</android.support.constraint.ConstraintLayout>

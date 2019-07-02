@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BackgroundGM"
+    tools:context=".frament.familyconnnect.TalkFragment"
+    tools:ignore="MissingConstraints">
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/group">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rec"
+            android:overScrollMode="never"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <TextView
+        android:id="@+id/group"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <ImageView
+        android:id="@+id/bt_gift"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginLeft="10dp"
+        android:paddingLeft="10dp"
+        android:src="@mipmap/icon_gift"
+        app:layout_constraintBottom_toBottomOf="@id/group"
+        app:layout_constraintTop_toTopOf="@id/group" />
+
+    <EditText
+        android:id="@+id/edit_txt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/corner_gm_solid"
+        app:layout_constraintBottom_toBottomOf="@id/group"
+        app:layout_constraintLeft_toRightOf="@id/bt_gift"
+        app:layout_constraintRight_toLeftOf="@id/bt_ok"
+        app:layout_constraintTop_toTopOf="@id/group" />
+
+
+    <Button
+        android:id="@+id/bt_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="@drawable/color_gm"
+        android:text="发送"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="@id/group"
+        app:layout_constraintRight_toRightOf="@id/group"
+        app:layout_constraintTop_toTopOf="@id/group" />
+
+
+</android.support.constraint.ConstraintLayout>

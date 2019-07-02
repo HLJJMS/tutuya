@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.FamilyConnectActivity"
+    tools:ignore="MissingConstraints">
+
+    <include layout="@layout/head_back" />
+
+    <ImageView
+
+        android:id="@+id/headimg"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="70dp"
+        android:paddingLeft="20dp"
+        android:src="@mipmap/baby_headimg"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_name"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginLeft="30dp"
+        android:gravity="bottom"
+        android:text="涂涂鸦"
+        android:textSize="@dimen/bigTitle"
+        app:layout_constraintBottom_toTopOf="@id/txt_school"
+        app:layout_constraintLeft_toRightOf="@id/headimg"
+        app:layout_constraintTop_toTopOf="@id/headimg" />
+
+    <TextView
+        android:id="@+id/txt_school"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginLeft="30dp"
+        android:text="兔兔"
+        app:layout_constraintBottom_toBottomOf="@id/headimg"
+        app:layout_constraintLeft_toRightOf="@id/headimg"
+        app:layout_constraintTop_toBottomOf="@id/txt_name" />
+
+    <com.flyco.tablayout.SlidingTabLayout
+        android:background="@color/colorWhite"
+        app:tl_underline_color="@color/textRmb"
+        app:tl_tab_space_equal="true"
+        android:id="@+id/tab"
+        app:tl_textSelectColor="@color/textRmb"
+        app:tl_textUnselectColor="@color/subhead"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/headimg" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tab">
+
+    </android.support.v4.view.ViewPager>
+</android.support.constraint.ConstraintLayout>

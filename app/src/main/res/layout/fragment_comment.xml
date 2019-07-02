@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:ignore="MissingConstraints"
+
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+    <ImageView
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:id="@+id/head_img"
+        android:src="@mipmap/linshimeinv"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        />
+   <EditText
+       android:layout_marginLeft="10dp"
+       android:gravity="center"
+       android:hint="我来说一句"
+       app:layout_constraintTop_toTopOf="@id/head_img"
+       app:layout_constraintBottom_toBottomOf="@id/head_img"
+       android:background="@drawable/corner_gm_solid"
+       app:layout_constraintLeft_toRightOf="@id/head_img"
+       app:layout_constraintRight_toRightOf="parent"
+       android:layout_marginRight="10dp"
+       android:layout_width="0dp"
+       android:layout_height="wrap_content" />
+    <android.support.v7.widget.RecyclerView
+        app:layout_constraintTop_toBottomOf="@id/head_img"
+        android:id="@+id/rec"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </android.support.v7.widget.RecyclerView>
+
+</android.support.constraint.ConstraintLayout>

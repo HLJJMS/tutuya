@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    tools:ignore="MissingConstraints">
+
+    <ImageView
+        android:src="@mipmap/linshitutu"
+        android:adjustViewBounds="true"
+        android:id="@+id/img"
+        android:layout_width="match_parent"
+        android:scaleType="fitXY"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:textColor="@color/bigTitle"
+        android:id="@+id/txt"
+        android:lines="2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="12dp"
+        android:textSize="@dimen/bigTitle"
+        android:paddingTop="10dp"
+        android:text="飞天小能豆玩偶"
+       app:layout_constraintBottom_toTopOf="@id/rmb" />
+    <TextView
+        android:id="@+id/rmb"
+        app:layout_constraintBottom_toBottomOf="@id/img"
+        android:textColor="@color/red"
+        android:paddingBottom="10dp"
+        android:text="￥999"
+        android:paddingLeft="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:gravity="center"
+        android:id="@+id/sum"
+        app:layout_constraintTop_toTopOf="@id/rmb"
+        app:layout_constraintBottom_toBottomOf="@id/rmb"
+        android:textColor="@color/textColor"
+        android:text="6000人付款"
+        app:layout_constraintLeft_toRightOf="@id/rmb"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:textSize="@dimen/small"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp" />
+    <CheckBox
+        android:scaleX="0.6"
+        android:scaleY="0.6"
+        android:layout_marginRight="5dp"
+        android:paddingBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="@id/rmb"
+        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/car"
+        style="@style/car"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp" />
+</android.support.constraint.ConstraintLayout>

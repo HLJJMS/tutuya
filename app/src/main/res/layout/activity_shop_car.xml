@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BackgroundGM"
+    tools:context=".tck.activity.mall.shopcar.ShopCarActivity"
+    tools:ignore="MissingConstraints">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/head_mall" />
+
+    <TextView
+        android:id="@+id/bt_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:gravity="end"
+        android:text="编辑商品"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/bt_pay"
+        app:layout_constraintTop_toBottomOf="@id/bt_edit" />
+
+    <TextView
+        android:id="@+id/bt_pay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="去结算"
+        android:textColor="@color/colorWhite"
+        android:padding="10dp"
+        android:background="@color/red"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/bt_all"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorWhite"
+        android:paddingLeft="20dp"
+        android:text="全选"
+        android:gravity="center_vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/bt_pay"
+        app:layout_constraintRight_toLeftOf="@id/bt_pay"
+        app:layout_constraintTop_toTopOf="@id/bt_pay" />
+
+    <TextView
+        android:id="@+id/rmb"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="￥98989"
+        android:paddingRight="20dp"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toBottomOf="@id/bt_pay"
+        app:layout_constraintRight_toLeftOf="@id/bt_pay"
+        app:layout_constraintTop_toTopOf="@id/bt_pay" />
+
+    <TextView
+        app:layout_constraintRight_toLeftOf="@id/rmb"
+        android:layout_width="wrap_content"
+        android:text="总计:"
+        android:gravity="center_vertical"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/bt_pay"
+        app:layout_constraintTop_toTopOf="@id/bt_pay" />
+</android.support.constraint.ConstraintLayout>

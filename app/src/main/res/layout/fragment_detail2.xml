@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/BackgroundGM"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.Education.EducationHomeActivity"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/corner_white_solid"
+            app:layout_constraintBottom_toBottomOf="@id/txt_detail"
+            app:layout_constraintLeft_toLeftOf="@id/lg"
+            app:layout_constraintRight_toRightOf="@id/rg"
+            app:layout_constraintTop_toTopOf="@id/img" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/corner_white_solid"
+            app:layout_constraintBottom_toBottomOf="@id/txt_honor"
+            app:layout_constraintLeft_toLeftOf="@id/lg"
+            app:layout_constraintRight_toRightOf="@id/rg"
+            app:layout_constraintTop_toTopOf="@id/title2" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/corner_white_solid"
+            app:layout_constraintBottom_toBottomOf="@id/txt_exp"
+            app:layout_constraintLeft_toLeftOf="@id/lg"
+            app:layout_constraintRight_toRightOf="@id/rg"
+            app:layout_constraintTop_toTopOf="@id/title3" />
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/linshilunbo" />
+
+        <TextView
+            android:textSize="@dimen/bigTitle"
+            android:textColor="@color/subhead"
+            android:layout_marginTop="10dp"
+            android:id="@+id/txt_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="呂凃"
+            app:layout_constraintLeft_toLeftOf="@id/lg"
+            app:layout_constraintTop_toBottomOf="@id/img" />
+
+        <TextView
+            android:textSize="@dimen/scTitle"
+            android:id="@+id/txt_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="29"
+            app:layout_constraintBottom_toBottomOf="@id/txt_name"
+            app:layout_constraintLeft_toRightOf="@id/txt_name" />
+
+        <TextView
+            android:textSize="@dimen/scTitle"
+            app:layout_constraintBottom_toBottomOf="@id/txt_name"
+            android:id="@+id/txt_school"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="一中"
+            app:layout_constraintLeft_toRightOf="@id/txt_age" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/keshi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="在线课时"
+            app:layout_constraintLeft_toLeftOf="@id/lg"
+            app:layout_constraintTop_toBottomOf="@id/txt_name" />
+
+        <TextView
+            android:id="@+id/txt_time"
+            android:textColor="#5EB130"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="120"
+            app:layout_constraintBottom_toBottomOf="@id/keshi"
+            app:layout_constraintLeft_toRightOf="@id/keshi" />
+
+        <TextView
+            android:textColor="#5EB130"
+            android:id="@+id/txt_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:text="120"
+            app:layout_constraintBottom_toBottomOf="@id/keshi"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:text="家长评分"
+            app:layout_constraintBottom_toBottomOf="@id/keshi"
+            app:layout_constraintRight_toLeftOf="@id/txt_score" />
+
+        <TextView
+        android:layout_marginTop="15dp"
+            android:id="@+id/txt_detail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:paddingBottom="10dp"
+            android:text="家长评分asdsadasdsadsadsadasdsadsad"
+            app:layout_constraintLeft_toLeftOf="@id/lg"
+            app:layout_constraintRight_toRightOf="@id/rg"
+            app:layout_constraintTop_toBottomOf="@id/txt_score" />
+
+        <TextView
+            android:textSize="@dimen/bigTitle"
+            android:textColor="@color/subhead"
+            android:id="@+id/title2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:text="个人介绍"
+            app:layout_constraintLeft_toLeftOf="@id/lg"
+            app:layout_constraintRight_toRightOf="@id/rg"
+            app:layout_constraintTop_toBottomOf="@id/txt_detail" />
+
+        <TextView
+            android:id="@+id/txt_honor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="asdsadsadsad"
+            app:layout_constraintLeft_toLeftOf="@id/lg"
+            app:layout_constraintRight_toRightOf="@id/rg"
+            app:layout_constraintTop_toBottomOf="@id/title2" />
+
+        <TextView
+            android:textSize="@dimen/bigTitle"
+            android:textColor="@color/subhead"
+            android:id="@+id/title3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:text="教学经验"
+            app:layout_constraintLeft_toLeftOf="@id/lg"
+            app:layout_constraintRight_toRightOf="@id/rg"
+            app:layout_constraintTop_toBottomOf="@id/txt_honor" />
+
+        <TextView
+            android:id="@+id/txt_exp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="asdsadsadsad"
+            app:layout_constraintLeft_toLeftOf="@id/lg"
+            app:layout_constraintRight_toRightOf="@id/rg"
+            app:layout_constraintTop_toBottomOf="@id/title3" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/lg"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.04" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/rg"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.96" />
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

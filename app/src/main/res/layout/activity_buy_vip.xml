@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BackgroundGM"
+    tools:context=".activity.BuyVipActivity"
+    tools:ignore="MissingConstraints">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/head_back" />
+
+    <TextView
+        android:id="@+id/bg1"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/colorWhite"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <ImageView
+        android:id="@+id/image_head"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:src="@mipmap/baby_headimg"
+        app:layout_constraintLeft_toLeftOf="@id/bg1"
+        app:layout_constraintTop_toTopOf="@id/bg1" />
+
+    <TextView
+        android:id="@+id/txt_name"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginLeft="20dp"
+        android:gravity="bottom"
+        android:textColor="@color/subhead"
+        android:textSize="@dimen/bigTitle"
+        app:layout_constraintBottom_toTopOf="@id/title1"
+        app:layout_constraintLeft_toRightOf="@id/image_head"
+        app:layout_constraintTop_toTopOf="@id/image_head" />
+
+    <TextView
+        android:id="@+id/title1"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="您还不是通创客会员"
+        app:layout_constraintBottom_toBottomOf="@id/image_head"
+        app:layout_constraintLeft_toLeftOf="@id/txt_name"
+        app:layout_constraintTop_toBottomOf="@id/txt_name" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/color_gm"
+        android:paddingLeft="30dp"
+        android:paddingTop="5dp"
+        android:paddingRight="30dp"
+        android:paddingBottom="5dp"
+        android:text="会员年卡仅399元 享童创客五大权益"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="@id/bg1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+    <TextView
+        android:id="@+id/bg2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorWhite"
+        android:gravity="center"
+        android:padding="50dp"
+        android:text="￥399"
+        android:textColor="@color/textRmb"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@id/bg1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="童创课会员"
+        android:textColor="@color/subhead"
+        android:textSize="@dimen/bigTitle"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/bg2" />
+
+
+    <TextView
+        android:id="@+id/title3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="收款方"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bg2" />
+
+    <TextView
+        android:id="@+id/title4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:text="北京涂涂鸦有限公司"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bg2" />
+
+    <TextView
+        android:id="@+id/bg3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title3" />
+
+    <TextView
+        android:id="@+id/title5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="支付方式"
+        android:textColor="@color/subhead"
+        app:layout_constraintLeft_toRightOf="@id/lrg"
+        app:layout_constraintTop_toTopOf="@id/bg3" />
+
+    <ImageView
+        android:id="@+id/logo_weixin"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:src="@mipmap/icon_weixin"
+        app:layout_constraintLeft_toLeftOf="@id/lrg"
+        app:layout_constraintTop_toBottomOf="@id/title5" />
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="微信"
+        app:layout_constraintBottom_toBottomOf="@id/logo_weixin"
+        app:layout_constraintLeft_toRightOf="@id/logo_weixin"
+        app:layout_constraintTop_toTopOf="@id/logo_weixin" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="支付宝"
+        app:layout_constraintBottom_toBottomOf="@id/logo_zhifubao"
+        app:layout_constraintLeft_toRightOf="@id/logo_weixin"
+        app:layout_constraintTop_toTopOf="@id/logo_zhifubao" />
+
+    <ImageView
+        android:id="@+id/logo_zhifubao"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:src="@mipmap/icon_zhifubao"
+        app:layout_constraintLeft_toLeftOf="@id/lrg"
+        app:layout_constraintTop_toBottomOf="@id/logo_weixin" />
+
+    <RadioButton
+        android:id="@+id/check_weixin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/logo_weixin"
+        app:layout_constraintRight_toRightOf="@id/rrg"
+        app:layout_constraintTop_toTopOf="@id/logo_weixin" />
+
+    <RadioButton
+        android:id="@+id/check_zhifubao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/logo_zhifubao"
+        app:layout_constraintRight_toRightOf="@id/rrg"
+        app:layout_constraintTop_toTopOf="@id/logo_zhifubao" />
+
+    <TextView
+        android:id="@+id/ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/color_gm"
+        android:paddingLeft="50dp"
+        android:paddingTop="10dp"
+        android:paddingRight="50dp"
+        android:paddingBottom="10dp"
+        android:text="去支付"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/bigTitle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/lrg"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.06" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/rrg"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.94" />
+
+</android.support.constraint.ConstraintLayout>

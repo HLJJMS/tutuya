@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="HomeTitle">
+        <attr name="txt" format="string"></attr>
+        <attr name="txtSize" format="dimension"></attr>
+        <attr name="txtColor" format="color"></attr>
+        <attr name="columnColor" format="color"></attr>
+    </declare-styleable>
+    <declare-styleable name="NumberView">
+        <attr name="number_txtSize" format="dimension"></attr>
+    </declare-styleable>
+    <declare-styleable name="ClassingTitle">
+        <attr name="bigText" format="string"></attr>
+        <attr name="smallText" format="string"></attr>
+    </declare-styleable>
+</resources>

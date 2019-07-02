@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="MissingConstraints"
+    android:background="@color/colorWhite"
+    tools:context=".activity.baby.WhetherSchoolActivity">
+    <include layout="@layout/head_back" android:id="@+id/title"/>
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/title"
+        android:background="@color/textColor"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp" />
+    <TextView
+        android:layout_marginTop="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:gravity="center"
+        android:textColor="@color/textRmb"
+        android:text="您的宝宝是否为《中国聪明宝宝培育工程主体幼儿园》的学生？"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        android:id="@+id/title2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         />
+    <TextView
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:padding="10dp"
+        android:gravity="center"
+        android:text="是，我的宝宝是《中国聪明宝宝培育工程主体幼儿园》的学生."
+        android:background="@mipmap/bg_yesschool"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/title2"
+        android:id="@+id/bt_yes"
+        android:layout_width="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/bt_no"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@mipmap/bg_noschool"
+        android:text="不是，我的宝宝不是《中国聪明宝宝培育工程主体幼儿园》的学生."
+        android:textColor="@color/colorWhite"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bt_yes" />
+
+    <TextView
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="10dp"
+        android:textSize="@dimen/scTitle"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/bt_no"
+        android:id="@+id/title3"
+        android:text="查找《中国聪明宝宝培育工程主题幼儿园》"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="城市:"
+        android:layout_marginTop="20dp"
+        app:layout_constraintLeft_toLeftOf="@id/title3"
+        app:layout_constraintTop_toBottomOf="@id/title3"
+        android:id="@+id/city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:hint="请选择城市"
+        android:textSize="@dimen/small"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="30dp"
+        app:layout_constraintTop_toTopOf="@id/city"
+        app:layout_constraintBottom_toBottomOf="@id/city"
+        android:id="@+id/bt_city"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp" />
+
+    <ImageView
+        android:src="@mipmap/icon_go"
+        android:paddingRight="10dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/city"
+        app:layout_constraintBottom_toBottomOf="@id/city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <android.support.v7.widget.RecyclerView
+        android:background="@color/BackgroundGM"
+        android:paddingTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/city"
+        android:layout_marginTop="20dp"
+        android:id="@+id/rec"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp">
+    </android.support.v7.widget.RecyclerView>
+</android.support.constraint.ConstraintLayout>

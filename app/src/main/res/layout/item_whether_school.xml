@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:padding="20dp"
+    android:background="#fffaff"
+    tools:ignore="MissingConstraints">
+
+    <TextView
+        android:id="@+id/txt_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="涂涂鸦幼儿园"
+        android:textColor="@color/subhead"
+        android:textSize="@dimen/bigTitle"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:textColor="@color/subhead"
+        android:id="@+id/ceo_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="园长姓名"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_name" />
+    <TextView
+        app:layout_constraintTop_toTopOf="@id/ceo_name"
+        app:layout_constraintBottom_toBottomOf="@id/ceo_name"
+        app:layout_constraintLeft_toRightOf="@id/ceo_name"
+        android:layout_marginLeft="30dp"
+        android:text="涂涂鸦"
+        android:id="@+id/txt_ceo_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:textColor="@color/subhead"
+        android:id="@+id/tel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="联系电话"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ceo_name" />
+    <TextView
+        app:layout_constraintTop_toTopOf="@id/tel"
+        app:layout_constraintBottom_toBottomOf="@id/tel"
+        app:layout_constraintLeft_toRightOf="@id/tel"
+        android:layout_marginLeft="30dp"
+        android:text="涂涂鸦"
+        android:id="@+id/txt_tel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:id="@+id/address"
+        android:textColor="@color/subhead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="园所地址"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tel" />
+    <TextView
+        app:layout_constraintTop_toTopOf="@id/address"
+        app:layout_constraintBottom_toBottomOf="@id/address"
+        app:layout_constraintLeft_toRightOf="@id/address"
+        android:layout_marginLeft="30dp"
+        android:text="涂涂鸦"
+        android:id="@+id/txt_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+</android.support.constraint.ConstraintLayout>

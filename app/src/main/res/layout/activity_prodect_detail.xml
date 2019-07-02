@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.mall.prodectdetail.ProdectDetailActivity"
+    tools:ignore="MissingConstraints">
+
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/bottom_group"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/BackgroundGM"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:id="@+id/lunbo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/linshilunbo"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/bt_prodect"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/BackgroundGM"
+                android:gravity="right|center_vertical"
+                android:paddingTop="13dp"
+                android:paddingBottom="13dp"
+                android:text="商品"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/bt_comment"
+                app:layout_constraintTop_toBottomOf="@id/title" />
+
+            <TextView
+                android:id="@+id/bt_comment"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/BackgroundGM"
+                android:gravity="center"
+                android:text="评论"
+                app:layout_constraintBottom_toBottomOf="@id/bt_prodect"
+                app:layout_constraintLeft_toRightOf="@id/bt_prodect"
+                app:layout_constraintRight_toLeftOf="@id/bt_detail"
+                app:layout_constraintTop_toTopOf="@id/bt_prodect" />
+
+            <TextView
+                android:id="@+id/bt_detail"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/BackgroundGM"
+                android:gravity="left|center_vertical"
+                android:text="详情"
+                app:layout_constraintBottom_toBottomOf="@id/bt_prodect"
+                app:layout_constraintLeft_toRightOf="@id/bt_comment"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/bt_prodect" />
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:paddingLeft="10dp"
+                android:src="@mipmap/icon_back"
+                app:layout_constraintBottom_toBottomOf="@id/bt_prodect"
+                app:layout_constraintTop_toTopOf="@id/bt_prodect" />
+
+            <ImageView
+                android:id="@+id/bt_car"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginEnd="20dp"
+                android:src="@mipmap/icon_title_car"
+                app:layout_constraintBottom_toBottomOf="@id/bt_prodect"
+                app:layout_constraintRight_toLeftOf="@id/bt_much"
+                app:layout_constraintTop_toTopOf="@id/bt_prodect" />
+
+            <ImageView
+                android:id="@+id/bt_much"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginEnd="25dp"
+                android:src="@mipmap/icon_much"
+                app:layout_constraintBottom_toBottomOf="@id/bt_prodect"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/bt_prodect" />
+
+            <TextView
+                android:id="@+id/txt_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:paddingStart="10dp"
+                android:paddingTop="10dp"
+                android:text="￥999"
+                android:textColor="@color/textRmb"
+                android:textSize="@dimen/bigTitle"
+                app:layout_constraintTop_toBottomOf="@id/lunbo" />
+
+            <TextView
+                android:id="@+id/txt_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:paddingStart="10dp"
+                android:paddingTop="10dp"
+                android:paddingRight="80dp"
+                android:text="贝芬乐儿童电子琴初学带麦克风钢琴宝宝女男孩玩具1-3新年礼物"
+                android:textColor="@color/subhead"
+                app:layout_constraintRight_toLeftOf="@id/bt_collection"
+                app:layout_constraintTop_toBottomOf="@id/txt_price" />
+
+            <CheckBox
+                android:id="@+id/ckeck_like"
+                style="@style/star"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/corner_gm_half"
+                android:text="收藏"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/txt_name" />
+
+            <TextView
+                android:id="@+id/txt_shunfeng"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="快递：15.0"
+                android:textSize="@dimen/scTitle"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/bt_sell_number"
+                app:layout_constraintTop_toBottomOf="@id/txt_name" />
+
+            <TextView
+                android:id="@+id/bt_sell_number"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/colorWhite"
+                android:gravity="center"
+                android:text="月销量：30.0"
+                android:textSize="@dimen/scTitle"
+                app:layout_constraintBottom_toBottomOf="@id/txt_shunfeng"
+                app:layout_constraintLeft_toRightOf="@id/txt_shunfeng"
+                app:layout_constraintRight_toLeftOf="@id/txt_address"
+                app:layout_constraintTop_toTopOf="@id/txt_shunfeng" />
+
+            <TextView
+                android:id="@+id/txt_address"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/colorWhite"
+                android:gravity="right|center_vertical"
+                android:padding="10dp"
+                android:text="详情"
+                android:textSize="@dimen/scTitle"
+                app:layout_constraintBottom_toBottomOf="@id/txt_shunfeng"
+                app:layout_constraintLeft_toRightOf="@id/bt_sell_number"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/txt_shunfeng" />
+
+            <TextView
+                android:id="@+id/fuwu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorWhite"
+                android:padding="10dp"
+                android:text="服务:"
+                app:layout_constraintTop_toBottomOf="@id/txt_shunfeng" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:text="七天无理由退货"
+                app:layout_constraintBottom_toBottomOf="@id/fuwu"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@id/fuwu" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:src="@mipmap/icon_go"
+                app:layout_constraintBottom_toBottomOf="@id/fuwu"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/fuwu" />
+
+
+            <TextView
+
+                android:id="@+id/yixuan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:padding="10dp"
+                android:text="已选:"
+                app:layout_constraintTop_toBottomOf="@id/fuwu" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:text="红色的兔子"
+                app:layout_constraintBottom_toBottomOf="@id/yixuan"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@id/yixuan" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:src="@mipmap/icon_go"
+                app:layout_constraintBottom_toBottomOf="@id/yixuan"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/yixuan" />
+
+            <TextView
+
+                android:id="@+id/txt_store"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:padding="10dp"
+                android:text="库存:       256"
+                app:layout_constraintTop_toBottomOf="@id/fuwu" />
+
+            <TextView
+                android:id="@+id/txt_buy_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorWhite"
+                android:padding="10dp"
+                android:text="配送至"
+                app:layout_constraintTop_toBottomOf="@id/txt_store" />
+
+            <TextView
+                android:id="@+id/txt_kg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:paddingStart="10dp"
+                android:paddingBottom="10dp"
+                android:text="重量:5kg"
+                app:layout_constraintTop_toBottomOf="@id/txt_buy_address" />
+
+            <com.tutuya.tck.diyview.HomeTitle
+                android:layout_marginTop="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="5dp"
+                android:id="@+id/bt_comment_much"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:paddingStart="10dp"
+                app:layout_constraintTop_toBottomOf="@id/txt_kg"
+                app:txt="宝贝评价" />
+
+            <android.support.v7.widget.RecyclerView
+                app:layout_constraintTop_toBottomOf="@id/bt_comment_much"
+                android:background="@color/colorWhite"
+                android:paddingTop="10dp"
+                android:id="@+id/comment_rec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+
+        </android.support.constraint.ConstraintLayout>
+
+
+    </ScrollView>
+
+    <android.support.constraint.Group
+        android:id="@+id/bottom_group"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/bt_customer_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:src="@mipmap/icon_customer_service"
+        app:layout_constraintBottom_toTopOf="@id/customer_service"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/bottom_group" />
+
+    <TextView
+        android:id="@+id/customer_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="客服"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_group"
+        app:layout_constraintLeft_toLeftOf="@id/bt_customer_service"
+        app:layout_constraintTop_toBottomOf="@id/bt_customer_service" />
+
+    <ImageView
+        android:id="@+id/bt_share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:src="@mipmap/icon_share"
+        app:layout_constraintBottom_toTopOf="@id/customer_service"
+        app:layout_constraintLeft_toRightOf="@id/bt_customer_service"
+        app:layout_constraintTop_toTopOf="@id/bottom_group" />
+
+    <TextView
+        android:id="@+id/share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="分享"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_group"
+        app:layout_constraintLeft_toLeftOf="@id/bt_share"
+        app:layout_constraintTop_toBottomOf="@id/bt_customer_service" />
+
+
+    <TextView
+        android:id="@+id/bt_add_car"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_add_car"
+        android:paddingStart="25dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="10dp"
+        android:text="加入购物车"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/bigTitle"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_group"
+        app:layout_constraintRight_toLeftOf="@id/bt_buy"
+        app:layout_constraintTop_toTopOf="@id/bottom_group" />
+
+
+    <TextView
+        android:id="@+id/bt_buy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/button_buy"
+        android:paddingStart="10dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="25dp"
+        android:paddingBottom="10dp"
+        android:text=" 立即购买"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/bigTitle"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_group"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/bottom_group" />
+</android.support.constraint.ConstraintLayout>

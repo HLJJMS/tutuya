@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="MissingConstraints">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="商品属性"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/bigTitle" />
+
+    <TextView
+        android:id="@+id/color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="颜色"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <TextView
+        android:id="@+id/verson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="版本"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/color" />
+
+    <TextView
+        android:id="@+id/type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="型号"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/verson" />
+
+    <TextView
+        android:id="@+id/number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="数量"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/type" />
+
+    <TextView
+        android:id="@+id/bt_reduce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/corner_gm_stroke"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:text="—"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@id/number"
+        app:layout_constraintLeft_toRightOf="@id/color"
+        app:layout_constraintTop_toTopOf="@id/number" />
+
+    <TextView
+        android:id="@+id/txt_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/corner_gm_stroke"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:text="2"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@id/number"
+        app:layout_constraintLeft_toRightOf="@id/bt_reduce"
+        app:layout_constraintTop_toTopOf="@id/number" />
+
+    <TextView
+        android:id="@+id/bt_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/corner_gm_stroke"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:text="+"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@id/number"
+        app:layout_constraintLeft_toRightOf="@id/txt_number"
+        app:layout_constraintTop_toTopOf="@id/number" />
+    <com.tutuya.tck.diyview.FlowRadioGroup
+        app:layout_constraintTop_toTopOf="@id/color"
+        app:layout_constraintLeft_toRightOf="@id/color"
+        android:id="@+id/color_fv"
+        android:layout_width="0dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_height="wrap_content"/>
+    <com.tutuya.tck.diyview.FlowView
+        app:layout_constraintTop_toTopOf="@id/verson"
+        app:layout_constraintLeft_toRightOf="@id/verson"
+        android:id="@+id/verson_fv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+    <com.tutuya.tck.diyview.FlowView
+        app:layout_constraintTop_toTopOf="@id/type"
+        app:layout_constraintLeft_toRightOf="@id/type"
+        android:id="@+id/type_fv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+    <RadioGroup
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="@id/type"
+        app:layout_constraintLeft_toRightOf="@id/type"
+        android:id="@+id/type_rg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/lg"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+</android.support.constraint.ConstraintLayout>

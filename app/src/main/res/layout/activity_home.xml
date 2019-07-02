@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.HomeActivity">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/frament"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/tl_2"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <com.flyco.tablayout.CommonTabLayout
+        android:id="@+id/tl_2"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:tl_iconHeight="23dp"
+        app:tl_iconWidth="23dp"
+        app:tl_indicator_color="#2C97DE"
+        app:tl_indicator_height="0dp"
+        app:tl_textSelectColor="#2C97DE"
+        app:tl_textUnselectColor="#66000000"
+        app:tl_textsize="12sp"
+        app:tl_underline_color="#DDDDDD"
+        app:tl_underline_height="1dp"
+        tools:ignore="MissingConstraints" />
+</android.support.constraint.ConstraintLayout>

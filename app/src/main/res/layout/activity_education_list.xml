@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.Education.EducationListActivity"
+    tools:ignore="MissingConstraints">
+
+   <cn.jzvd.JzvdStd
+       android:id="@+id/video"
+       android:layout_width="match_parent"
+       android:layout_height="300dp">
+
+   </cn.jzvd.JzvdStd>
+
+
+    <include layout="@layout/head_back_alpha" />
+
+    <TextView
+        android:padding="10dp"
+        android:id="@+id/title1"
+        app:layout_constraintTop_toBottomOf="@id/video"
+        android:text="课程列表"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rec"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/title1">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+</android.support.constraint.ConstraintLayout>

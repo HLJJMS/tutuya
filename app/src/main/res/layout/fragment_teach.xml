@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BackgroundGM"
+    tools:context=".frament.teach.TeachFragment"
+    tools:ignore="MissingConstraints">
+    <TextView
+        app:layout_constraintBottom_toBottomOf="@id/rec_one"
+        app:layout_constraintRight_toRightOf="@id/rg"
+        app:layout_constraintLeft_toLeftOf="@id/lg"
+        app:layout_constraintTop_toTopOf="@id/title1"
+        android:layout_width="0dp"
+        android:background="@drawable/corner_white_solid"
+        android:layout_height="0dp" />
+    <TextView
+        app:layout_constraintBottom_toBottomOf="@id/zhanwei"
+        app:layout_constraintRight_toRightOf="@id/rg"
+        app:layout_constraintLeft_toLeftOf="@id/lg"
+        app:layout_constraintTop_toTopOf="@id/title2"
+        android:layout_width="0dp"
+        android:background="@drawable/corner_white_solid"
+        android:layout_height="0dp" />
+    <TextView
+        app:layout_constraintBottom_toBottomOf="@id/rec_two"
+        app:layout_constraintRight_toRightOf="@id/rg"
+        app:layout_constraintLeft_toLeftOf="@id/lg"
+        app:layout_constraintTop_toTopOf="@id/title3"
+        android:layout_width="0dp"
+        android:background="@drawable/corner_white_solid"
+        android:layout_height="0dp" />
+    <com.tutuya.tck.diyview.ClassingTitle
+        android:id="@+id/title1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:bigText="在线课堂"
+        app:layout_constraintTop_toTopOf="parent"
+        app:smallText="精选全球优秀教师" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rec_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/title1" />
+
+    <com.tutuya.tck.diyview.ClassingTitle
+        android:id="@+id/title2"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bigText="讲师讲评"
+        app:layout_constraintTop_toBottomOf="@id/rec_one"
+        app:smallText="精选全球优秀教师" />
+
+    <TextView
+        android:id="@+id/name_one"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/bg_gradual_class_left"
+        android:gravity="center"
+        android:text="吉超"
+        app:layout_constraintBottom_toBottomOf="@id/lingxing1"
+        app:layout_constraintLeft_toLeftOf="@id/lg"
+        app:layout_constraintRight_toLeftOf="@id/middleLine"
+        app:layout_constraintTop_toTopOf="@id/lingxing1" />
+    <TextView
+        android:id="@+id/name_two"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/bg_gradual_class_right"
+        android:gravity="center"
+        android:text="吉超"
+        app:layout_constraintBottom_toBottomOf="@id/lingxing2"
+        app:layout_constraintLeft_toRightOf="@id/middleLine"
+        app:layout_constraintRight_toRightOf="@id/rg"
+        app:layout_constraintTop_toTopOf="@id/lingxing2" />
+
+    <TextView
+        android:id="@+id/name_three"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/bg_gradual_class_left"
+        android:gravity="center"
+        android:text="吉超"
+        app:layout_constraintBottom_toBottomOf="@id/lingxing3"
+        app:layout_constraintLeft_toLeftOf="@id/lg"
+        app:layout_constraintRight_toLeftOf="@id/middleLine"
+        app:layout_constraintTop_toTopOf="@id/lingxing3" />
+    <TextView
+        android:id="@+id/detail_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="市优秀教师"
+        android:textColor="#5EB130"
+        android:textSize="@dimen/small"
+        app:layout_constraintBottom_toBottomOf="@id/name_one"
+        app:layout_constraintLeft_toLeftOf="@id/name_one"
+        app:layout_constraintRight_toRightOf="@id/name_one" />
+
+    <TextView
+        android:id="@+id/detail_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="市优秀教师"
+        android:textColor="#5EB130"
+        android:textSize="@dimen/small"
+        app:layout_constraintBottom_toBottomOf="@id/name_two"
+        app:layout_constraintLeft_toLeftOf="@id/name_two"
+        app:layout_constraintRight_toRightOf="@id/name_two" />
+
+    <TextView
+        android:id="@+id/detail_three"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="市优秀教师"
+        android:textColor="#5EB130"
+        android:textSize="@dimen/small"
+        app:layout_constraintBottom_toBottomOf="@id/name_three"
+        app:layout_constraintLeft_toLeftOf="@id/name_three"
+        app:layout_constraintRight_toRightOf="@id/name_three" />
+
+
+
+    <ImageView
+        android:id="@+id/lingxing1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/linshilingxing"
+        app:layout_constraintRight_toLeftOf="@id/middleLine"
+        app:layout_constraintTop_toBottomOf="@id/title2" />
+
+    <ImageView
+        android:id="@+id/lingxing2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/linshilingxing"
+        app:layout_constraintCircle="@id/lingxing1"
+        app:layout_constraintCircleAngle="135"
+        app:layout_constraintCircleRadius="60dp" />
+
+    <ImageView
+
+        android:id="@+id/lingxing3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/linshilingxing"
+        app:layout_constraintCircle="@id/lingxing1"
+        app:layout_constraintCircleAngle="180"
+        app:layout_constraintCircleRadius="80dp" />
+<TextView
+    app:layout_constraintTop_toBottomOf="@id/name_three"
+    android:id="@+id/zhanwei"
+    android:layout_width="wrap_content"
+    android:layout_height="5dp" />
+    <com.tutuya.tck.diyview.ClassingTitle
+        app:layout_constraintRight_toRightOf="@id/rg"
+        app:layout_constraintLeft_toLeftOf="@id/lg"
+        android:id="@+id/title3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:bigText="在线课堂"
+        app:layout_constraintTop_toBottomOf="@id/lingxing3"
+        app:smallText="精选全球优秀教师" />
+
+
+
+    <android.support.v7.widget.RecyclerView
+        app:layout_constraintRight_toRightOf="@id/rg"
+        app:layout_constraintLeft_toLeftOf="@id/lg"
+        android:id="@+id/rec_two"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/title3" />
+    <android.support.constraint.Guideline
+        android:id="@+id/middleLine"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.53" />
+    <android.support.constraint.Guideline
+        android:id="@+id/lg"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.04" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/rg"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.96" />
+
+</android.support.constraint.ConstraintLayout>
+</ScrollView>

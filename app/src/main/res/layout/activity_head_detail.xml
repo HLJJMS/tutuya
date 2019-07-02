@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/BackgroundGM"
+        tools:context=".tck.activity.headtest.HeadDetailActivity"
+        tools:ignore="MissingConstraints">
+
+        <include
+            android:id="@+id/head"
+            layout="@layout/head_back" />
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/head">
+
+            <ImageView
+                android:id="@+id/scan"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/scuccess"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="预约成功"
+            android:textColor="@color/subhead"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@id/ll" />
+
+        <TextView
+            android:id="@+id/info"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@color/colorWhite"
+            android:padding="5dp"
+            android:text="预约信息"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toRightOf="@id/lg"
+            app:layout_constraintRight_toLeftOf="@id/rg"
+            app:layout_constraintTop_toBottomOf="@id/scuccess" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/lg"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.04" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/rg"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.96" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintLeft_toRightOf="@id/lg"
+            app:layout_constraintRight_toLeftOf="@id/rg"
+            app:layout_constraintTop_toBottomOf="@id/info" />
+
+
+        <TextView
+            android:id="@+id/cancel"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/color_gm"
+            android:gravity="center"
+            android:text="取消预约"
+            android:textColor="@color/colorWhite"
+            android:textSize="22sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/lbg"
+            app:layout_constraintRight_toLeftOf="@id/rbg" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/lbg"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.15" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/rbg"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.85" />
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

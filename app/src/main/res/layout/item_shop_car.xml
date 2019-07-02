@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:layout_marginTop="1dp"
+    android:background="@color/colorWhite"
+    tools:ignore="MissingConstraints">
+
+    <RadioButton
+        android:id="@+id/bt_radio"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/image"
+        app:layout_constraintTop_toTopOf="@id/image" />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/bt_radio"
+        app:layout_constraintRight_toLeftOf="@id/lg" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/lg"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <TextView
+        android:text="4驱！4轮越野儿童电动车四轮玩具充电汽车可坐人小孩宝宝四驱童车"
+        android:id="@+id/txt_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/lg"
+        app:layout_constraintTop_toTopOf="@id/image" />
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:text="0.755kg；玫瑰红，标准版"
+        android:id="@+id/txt_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/txt_name"
+      app:layout_constraintTop_toBottomOf="@id/txt_name" />
+
+    <TextView
+        android:textColor="@color/red"
+        android:text="¥1699.00"
+        android:id="@+id/txt_pay"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/txt_name"
+        app:layout_constraintTop_toBottomOf="@id/txt_detail" />
+
+</android.support.constraint.ConstraintLayout>

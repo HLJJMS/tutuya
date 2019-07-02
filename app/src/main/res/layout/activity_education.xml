@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.Education.EducationHomeActivity"
+    tools:ignore="MissingConstraints">
+
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/head_back_alpha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toTopOf="parent" />
+    <VideoView
+        app:layout_constraintTop_toBottomOf="@id/title"
+        android:id="@+id/video"
+        android:layout_width="match_parent"
+        android:layout_height="300dp" />
+
+    <com.flyco.tablayout.SlidingTabLayout
+        android:id="@+id/tab"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/corner_white_solid"
+        app:layout_constraintTop_toBottomOf="@id/video"
+        app:tl_tab_space_equal="true"
+        app:tl_textAllCaps="true"
+        app:tl_textBold="BOTH"
+        app:tl_textSelectColor="#FEA30E"
+        app:tl_textUnselectColor="@color/colorBlack"
+        app:tl_textsize="14sp"
+        app:tl_underline_color="#FEA30E" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tab" />
+</android.support.constraint.ConstraintLayout>

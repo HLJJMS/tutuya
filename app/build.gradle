@@ -1,0 +1,126 @@
+apply plugin: 'com.android.application'
+
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'key0'
+            keyPassword 'tutuya'
+            storeFile file('F:/project_box/tutuya/tutuya.jks')
+            storePassword 'tutuya'
+        }
+    }
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.tutuya.tck"
+        minSdkVersion 17
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+        multiDexEnabled true
+        compileOptions {
+
+            sourceCompatibility JavaVersion.VERSION_1_8
+
+            targetCompatibility JavaVersion.VERSION_1_8
+
+        }
+        ndk {
+            //选择要添加的对应 cpu 类型的 .so 库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a'
+            // 还可以添加 'x86', 'x86_64', 'mips', 'mips64'
+        }
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: applicationId,
+                JPUSH_APPKEY : "2955449750953af55c2c1940", //JPush 上注册的包名对应的 Appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
+
+
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            signingConfig signingConfigs.config
+        }
+
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs 'libs'
+        }
+    }
+}
+repositories {
+    mavenCentral()
+    maven { url 'https://maven.google.com' }
+}
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'com.google.android.gms:play-services-plus:16.0.0'
+    implementation 'com.android.support:design:28.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    /*------------------------------------------以下為自定的第三方-----------------------------------------------*/
+
+    implementation 'com.android.support:multidex:1.0.3'
+    api 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    implementation files('libs/BaiduLBS_Android.jar')
+    // Okhttp库
+    implementation 'com.squareup.okhttp3:okhttp:3.1.2'
+    // Retrofit库
+    implementation 'com.squareup.retrofit2:retrofit:2.0.2'
+    implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
+    //glide第三方
+    implementation 'com.github.bumptech.glide:glide:4.5.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.5.0'
+    //飞科第三方
+    implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    //权限
+    api 'com.zhy:mpermission-compiler:1.0.0'
+    implementation 'com.zhy:mpermission-api:1.0.0'
+    //选择器
+    implementation 'com.contrarywind:Android-PickerView:4.1.7'
+    //画廊
+    implementation 'com.yarolegovich:discrete-scrollview:1.4.9'
+//    拦截器
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+//浮动按钮
+    implementation 'com.getbase:floatingactionbutton:1.10.1'
+//轮播图
+    implementation 'com.youth.banner:banner:1.4.10'
+
+    implementation 'android.arch.paging:runtime:1.0.0'
+
+    implementation 'org.greenrobot:eventbus:3.0.0'
+    //解决获取不到@Subscribe注解的问题
+    compileOnly 'org.glassfish:javax.annotation:10.0-b28'
+
+//    上拉加载
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-22'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-22'//没有使用特殊Header，可以不加这行
+
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.5.4'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
+
+
+    implementation 'cn.jzvd:jiaozivideoplayer:7.0_preview'
+
+
+    implementation 'cn.jiguang.sdk:jpush:3.2.0'  // 此处以JPush 3.2.0 版本为例。
+    implementation 'cn.jiguang.sdk:jcore:1.2.7'  // 此处以JCore 1.2.7 版本为例。
+}

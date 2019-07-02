@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BackgroundGM"
+    tools:context=".activity.CourseRecommendationListActivity"
+    tools:ignore="MissingConstraints">
+<include layout="@layout/head_back" android:id="@+id/title"/>
+
+
+    <RadioGroup
+        app:layout_constraintTop_toBottomOf="@id/title"
+        android:id="@+id/group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <RadioButton
+            android:id="@+id/r0"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/classing_radio"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="全部"
+            android:textColor="@color/radio"
+            android:textSize="@dimen/scTitle" />
+
+        <RadioButton
+            android:id="@+id/r1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/classing_radio"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="创造力"
+            android:textColor="@color/radio"
+            android:textSize="@dimen/scTitle" />
+
+        <RadioButton
+            android:id="@+id/r2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/classing_radio"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="家庭教育"
+            android:textColor="@color/radio"
+            android:textSize="@dimen/scTitle" />
+
+        <RadioButton
+            android:id="@+id/r3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/classing_radio"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="拓展教育"
+            android:textColor="@color/radio"
+            android:textSize="@dimen/scTitle" />
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        android:paddingBottom="10dp"
+        android:id="@+id/group1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/group">
+
+        <RadioButton
+            android:id="@+id/r10"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/classing_radio"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="养成教育"
+            android:textColor="@color/radio"
+            android:textSize="@dimen/scTitle" />
+
+        <RadioButton
+            android:id="@+id/r11"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/classing_radio"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="健康教育"
+            android:textColor="@color/radio"
+            android:textSize="@dimen/scTitle" />
+        <RadioButton
+            android:visibility="invisible"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/classing_radio"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:textColor="@color/radio"
+            android:textSize="@dimen/scTitle" />
+        <RadioButton
+            android:visibility="invisible"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/classing_radio"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:textColor="@color/radio"
+            android:textSize="@dimen/scTitle" />
+    </RadioGroup>
+    <android.support.v7.widget.RecyclerView
+        app:layout_constraintTop_toBottomOf="@id/group1"
+        android:id="@+id/rec"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </android.support.v7.widget.RecyclerView>
+
+</android.support.constraint.ConstraintLayout>

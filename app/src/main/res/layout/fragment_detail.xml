@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pickerview_bgColor_default"
+    >
+
+    <ImageView
+        android:src="@mipmap/education_detail_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="幼儿教育也有广义和狭义之分，从广义上说，凡是能够影响幼儿身体成长和认知、情感、性格等方面发展的有目的的活动，如幼儿在成人的指导下看电视、做家务、参加社会活动，等等，都可说是幼儿教育" />
+
+</FrameLayout>

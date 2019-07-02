@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BackgroundGM"
+    tools:context=".activity.baby.AddBabyActivity"
+    tools:ignore="MissingConstraints">
+
+    <include
+        android:id="@+id/head"
+        layout="@layout/head_back" />
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/head">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="75dp"
+            android:layout_height="90dp"
+            android:src="@mipmap/baby_upphoto" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/colorWhite"
+        app:layout_constraintBottom_toTopOf="@id/et_school"
+        app:layout_constraintTop_toBottomOf="@id/ll" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/colorWhite"
+        app:layout_constraintBottom_toTopOf="@id/et_sex"
+        app:layout_constraintTop_toBottomOf="@id/et_class" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/colorWhite"
+        app:layout_constraintBottom_toTopOf="@id/et_id"
+        app:layout_constraintTop_toBottomOf="@id/et_name" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="@id/et_id"
+        app:layout_constraintTop_toBottomOf="@id/et_sex" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/colorWhite"
+        app:layout_constraintBottom_toTopOf="@id/et_class"
+        app:layout_constraintTop_toBottomOf="@id/et_city" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="@id/et_class"
+        app:layout_constraintTop_toBottomOf="@id/et_school" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="姓名："
+        android:textColor="@color/colorBlack"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toRightOf="@id/lg"
+        app:layout_constraintTop_toBottomOf="@id/tv_class"
+        app:layout_constraintTop_toTopOf="@id/et_name" />
+
+    <TextView
+        android:id="@+id/tv_id"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:padding="10dp"
+        android:text="身份证号："
+        android:textColor="@color/colorBlack"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toRightOf="@id/lg"
+        app:layout_constraintTop_toBottomOf="@id/tv_sex"
+        app:layout_constraintTop_toTopOf="@id/et_id" />
+
+    <TextView
+        android:id="@+id/tv_sex"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:padding="10dp"
+        android:text="性别："
+        android:textColor="@color/colorBlack"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_id"
+        app:layout_constraintLeft_toRightOf="@id/lg"
+        app:layout_constraintTop_toBottomOf="@id/tv_name"
+        app:layout_constraintTop_toTopOf="@id/et_sex" />
+
+    <TextView
+        android:id="@+id/tv_city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="城市："
+        android:textColor="@color/colorBlack"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toRightOf="@id/lg"
+        app:layout_constraintTop_toBottomOf="@id/ll" />
+
+    <TextView
+        android:id="@+id/tv_school"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="学校"
+        android:textColor="@color/colorBlack"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toRightOf="@id/lg"
+        app:layout_constraintTop_toBottomOf="@id/tv_city"
+        app:layout_constraintTop_toTopOf="@id/et_school" />
+
+    <TextView
+        android:id="@+id/tv_class"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="班级"
+        android:textColor="@color/colorBlack"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toRightOf="@id/lg"
+        app:layout_constraintTop_toBottomOf="@id/tv_school" />
+
+
+    <TextView
+        android:gravity="right"
+        android:id="@+id/et_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="30dp"
+        android:background="@null"
+        android:hint="请输入姓名"
+        android:padding="10dp"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toTopOf="@+id/et_sex"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_class"
+        app:layout_constraintVertical_chainStyle="spread_inside" />
+
+    <TextView
+        android:gravity="right"
+        android:id="@+id/et_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="30dp"
+        android:background="@null"
+        android:hint="请输入身份证号"
+        android:padding="10dp"
+        android:textSize="13sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_sex" />
+
+
+    <TextView
+        android:gravity="right"
+        android:id="@+id/et_sex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="30dp"
+        android:background="@null"
+        android:hint="请选择性别"
+        android:padding="10dp"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toTopOf="@+id/et_id"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_name" />
+
+    <TextView
+        android:gravity="right"
+        android:id="@+id/et_city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="30dp"
+        android:background="@null"
+        android:hint="请选择城市"
+        android:padding="10dp"
+        android:textSize="13sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll" />
+
+    <TextView
+        android:gravity="right"
+        android:id="@+id/et_school"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="30dp"
+        android:background="@null"
+        android:hint="请选择学校"
+        android:padding="10dp"
+        android:textSize="13sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_city" />
+
+    <TextView
+        android:gravity="right"
+        android:id="@+id/et_class"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="30dp"
+        android:background="@null"
+        android:hint="请选择班级"
+        android:padding="10dp"
+        android:textSize="13sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_school" />
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginRight="10dp"
+        android:src="@mipmap/icon_go"
+        app:layout_constraintBottom_toBottomOf="@id/et_city"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/et_city" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:src="@mipmap/icon_go"
+        app:layout_constraintBottom_toBottomOf="@id/et_school"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/et_school" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:src="@mipmap/icon_go"
+        app:layout_constraintBottom_toBottomOf="@id/et_class"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/et_class" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:src="@mipmap/icon_go"
+        app:layout_constraintBottom_toBottomOf="@id/et_name"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/et_name" />
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/lg"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.04" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/rg"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.96" />
+
+    <Button
+        android:id="@+id/ok"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/color_gm"
+        android:text="保存信息"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintLeft_toRightOf="@id/lg"
+        app:layout_constraintRight_toLeftOf="@id/rg"
+        app:layout_constraintTop_toBottomOf="@id/et_id" />
+
+
+</android.support.constraint.ConstraintLayout>

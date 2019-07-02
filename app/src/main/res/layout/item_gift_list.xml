@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@color/colorWhite"
+    android:paddingLeft="20dp"
+    android:paddingTop="15dp"
+    android:paddingEnd="20dp"
+    android:paddingBottom="15dp"
+    tools:ignore="MissingConstraints">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@mipmap/baby_headimg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="跑车"
+        android:textColor="@color/subhead"
+        android:textSize="@dimen/bigTitle"
+        app:layout_constraintBottom_toTopOf="@id/rmb"
+        app:layout_constraintLeft_toRightOf="@id/image"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/rmb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="15dou"
+        android:textSize="@dimen/scTitle"
+        app:layout_constraintBottom_toTopOf="@id/time"
+        app:layout_constraintLeft_toLeftOf="@id/txt_name"
+        app:layout_constraintTop_toBottomOf="@id/txt_name" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12.13.15"
+        android:textSize="@dimen/scTitle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/txt_name"
+        app:layout_constraintTop_toBottomOf="@id/rmb" />
+
+    <TextView
+        android:id="@+id/sum_rmb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="15"
+        android:textSize="@dimen/scTitle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+    <TextView
+        android:id="@+id/number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="X15"
+        android:textColor="@color/subhead"
+        android:textSize="@dimen/bigTitle"
+        app:layout_constraintBottom_toTopOf="@id/sum_rmb"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorWhite"
+    tools:ignore="MissingConstraints"
+    android:layout_height="50dp">
+
+    <ImageView
+        android:paddingRight="30dp"
+        android:paddingLeft="10dp"
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:src="@mipmap/icon_back"
+        app:layout_constraintBottom_toBottomOf="@id/head_title"
+        app:layout_constraintTop_toTopOf="@id/head_title" />
+
+    <TextView
+        android:id="@+id/head_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="标题"
+        android:textSize="18sp" />
+</android.support.constraint.ConstraintLayout>

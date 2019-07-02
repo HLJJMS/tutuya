@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sw"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.tutuya.tck.diyview.SmartScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhite"
+            tools:ignore="MissingConstraints">
+
+
+            <com.youth.banner.Banner
+                android:id="@+id/banner"
+                android:layout_width="match_parent"
+                android:layout_height="200dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/bg_home"
+                app:layout_constraintLeft_toRightOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/banner"
+                tools:ignore="MissingConstraints" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/bg_home"
+                app:layout_constraintLeft_toRightOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/class_rec"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/position_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="定位中..."
+                android:textSize="@dimen/bigTitle"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/position_img"
+                app:layout_constraintLeft_toRightOf="@id/lg"
+                app:layout_constraintTop_toTopOf="@id/position_img" />
+
+            <ImageView
+                android:id="@+id/position_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="40dp"
+                android:src="@mipmap/position"
+                app:layout_constraintLeft_toRightOf="@id/position_txt"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/about_baby_rec"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/corner_white_solid"
+                app:layout_constraintLeft_toRightOf="@id/lg"
+                app:layout_constraintRight_toLeftOf="@id/rg"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/study_img"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:src="@mipmap/home_study"
+                app:layout_constraintLeft_toRightOf="@id/lg"
+                app:layout_constraintRight_toLeftOf="@id/rg"
+                app:layout_constraintTop_toBottomOf="@id/about_baby_rec" />
+
+            <TextView
+                android:id="@+id/study_txt"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="100dp"
+                android:gravity="center"
+                android:text="好好学习"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@id/study_img"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@id/study_img" />
+
+            <TextView
+                android:id="@+id/tv_classing"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="在线课堂"
+                android:textColor="@color/subhead"
+                android:textSize="@dimen/big"
+                app:layout_constraintLeft_toRightOf="@id/lg"
+                app:layout_constraintRight_toLeftOf="@id/rg"
+                app:layout_constraintTop_toBottomOf="@id/study_img" />
+
+            <TextView
+                android:id="@+id/five_study"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="五大教育"
+                app:layout_constraintLeft_toRightOf="@id/lg"
+                app:layout_constraintRight_toLeftOf="@id/rg"
+                app:layout_constraintTop_toBottomOf="@id/tv_classing" />
+
+
+            <ImageView
+                android:id="@+id/bt_family"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingEnd="10dp"
+                android:src="@mipmap/linshiclassone"
+                app:layout_constraintLeft_toRightOf="@id/lg"
+                app:layout_constraintRight_toLeftOf="@id/bt_develop"
+                app:layout_constraintTop_toBottomOf="@id/five_study" />
+
+            <ImageView
+                android:id="@+id/bt_develop"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:src="@mipmap/linshiclasstwo"
+                app:layout_constraintLeft_toRightOf="@id/bt_family"
+                app:layout_constraintRight_toLeftOf="@id/rg"
+                app:layout_constraintTop_toTopOf="@id/bt_family" />
+
+            <ImageView
+                android:id="@+id/bt_healthy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingEnd="10dp"
+                android:src="@mipmap/linshiclassthree"
+                app:layout_constraintLeft_toRightOf="@id/lg"
+                app:layout_constraintRight_toLeftOf="@id/bt_develop"
+                app:layout_constraintTop_toBottomOf="@id/bt_family" />
+
+            <ImageView
+                android:id="@+id/bt_expand"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingStart="10dp"
+                android:src="@mipmap/linshiclassfour"
+                app:layout_constraintLeft_toRightOf="@id/bt_family"
+                app:layout_constraintRight_toLeftOf="@id/rg"
+                app:layout_constraintTop_toBottomOf="@id/bt_family" />
+
+            <ImageView
+                android:id="@+id/bt_create"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/linshiclassfive"
+                app:layout_constraintBottom_toBottomOf="@id/bt_healthy"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bt_konw"
+                app:layout_constraintTop_toTopOf="@id/bt_family" />
+
+
+            <com.tutuya.tck.diyview.HomeTitle
+                android:id="@+id/teacher"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintLeft_toRightOf="@id/lg"
+                app:layout_constraintRight_toLeftOf="@id/rg"
+                app:layout_constraintTop_toBottomOf="@+id/bt_expand"
+                app:txt="专家名师" />
+
+            <ImageView
+                android:id="@+id/bt_teacher_one"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                app:layout_constraintLeft_toRightOf="@id/lg"
+                app:layout_constraintRight_toLeftOf="@id/bt_teacher_two"
+                app:layout_constraintTop_toBottomOf="@id/teacher" />
+
+            <ImageView
+                android:id="@+id/bt_teacher_two"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintLeft_toRightOf="@id/bt_teacher_one"
+                app:layout_constraintRight_toLeftOf="@id/rg"
+                app:layout_constraintTop_toTopOf="@id/bt_teacher_one" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/corner_white_solid"
+                app:layout_constraintBottom_toBottomOf="@id/txt_detail_one_three"
+                app:layout_constraintLeft_toLeftOf="@id/txt_detail_one_three"
+                app:layout_constraintRight_toRightOf="@id/txt_detail_one_three"
+                app:layout_constraintTop_toTopOf="@id/icon_one" />
+
+            <ImageView
+                android:id="@+id/icon_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:scaleX="1.3"
+                android:scaleY="1.3"
+                android:src="@mipmap/icon_person"
+                app:layout_constraintBottom_toTopOf="@id/txt_name_one"
+                app:layout_constraintLeft_toLeftOf="@id/txt_detail_one_three" />
+
+            <TextView
+                android:id="@+id/txt_number_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="25232"
+                android:textSize="@dimen/scTitle"
+                app:layout_constraintBottom_toBottomOf="@id/icon_one"
+                app:layout_constraintLeft_toRightOf="@id/icon_one"
+                app:layout_constraintTop_toTopOf="@id/icon_one" />
+
+            <CheckBox
+                android:id="@+id/bt_heart_one"
+                style="@style/heart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/icon_one"
+                app:layout_constraintRight_toRightOf="@id/txt_detail_one_three"
+                app:layout_constraintTop_toTopOf="@id/icon_one" />
+
+            <TextView
+                android:id="@+id/txt_name_one"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingBottom="5dp"
+                android:text="谷传玲"
+                android:textColor="@color/bigTitle"
+                android:textSize="@dimen/bigTitle"
+                app:layout_constraintBottom_toTopOf="@id/txt_detail_one_three"
+                app:layout_constraintLeft_toLeftOf="@id/txt_detail_one_three"
+                app:layout_constraintRight_toRightOf="@id/txt_detail_one_three" />
+
+
+            <TextView
+                android:id="@+id/txt_detail_one_three"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="40dp"
+                android:paddingLeft="10dp"
+                android:paddingBottom="5dp"
+                android:text="中国首批注册营养师"
+                android:textSize="@dimen/scTitle"
+                app:layout_constraintBottom_toTopOf="@id/bt_classing_select"
+                app:layout_constraintLeft_toLeftOf="@id/bt_teacher_one"
+                app:layout_constraintRight_toRightOf="@id/bt_teacher_one" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/corner_white_solid"
+                app:layout_constraintBottom_toBottomOf="@id/txt_detail_two_three"
+                app:layout_constraintLeft_toLeftOf="@id/txt_detail_two_three"
+                app:layout_constraintRight_toRightOf="@id/txt_detail_two_three"
+                app:layout_constraintTop_toTopOf="@id/icon_two" />
+
+            <ImageView
+                android:id="@+id/icon_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:scaleX="1.3"
+                android:scaleY="1.3"
+                android:src="@mipmap/icon_person"
+                app:layout_constraintBottom_toTopOf="@id/txt_name_two"
+                app:layout_constraintLeft_toLeftOf="@id/txt_detail_two_three" />
+
+            <TextView
+                android:id="@+id/txt_number_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="25232"
+                android:textSize="@dimen/scTitle"
+                app:layout_constraintBottom_toBottomOf="@id/icon_two"
+                app:layout_constraintLeft_toRightOf="@id/icon_two"
+                app:layout_constraintTop_toTopOf="@id/icon_two" />
+
+            <CheckBox
+                android:id="@+id/bt_heart_two"
+                style="@style/heart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/icon_two"
+                app:layout_constraintRight_toRightOf="@id/txt_detail_two_three"
+                app:layout_constraintTop_toTopOf="@id/icon_two" />
+
+            <TextView
+                android:id="@+id/txt_name_two"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingBottom="5dp"
+                android:text="谷传玲"
+                android:textColor="@color/bigTitle"
+                android:textSize="@dimen/bigTitle"
+                app:layout_constraintBottom_toTopOf="@id/txt_detail_two_three"
+                app:layout_constraintLeft_toLeftOf="@id/txt_detail_two_three"
+                app:layout_constraintRight_toRightOf="@id/txt_detail_two_three" />
+
+
+            <TextView
+                android:id="@+id/txt_detail_two_three"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="40dp"
+                android:paddingLeft="10dp"
+                android:paddingBottom="5dp"
+                android:text="中国首批注册营养师"
+                android:textSize="@dimen/scTitle"
+                app:layout_constraintBottom_toTopOf="@id/bt_classing_select"
+                app:layout_constraintLeft_toLeftOf="@id/bt_teacher_two"
+                app:layout_constraintRight_toRightOf="@id/bt_teacher_two" />
+
+
+            <com.tutuya.tck.diyview.HomeTitle
+                android:id="@+id/bt_classing_select"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintLeft_toRightOf="@id/lg"
+                app:layout_constraintRight_toLeftOf="@id/rg"
+                app:layout_constraintTop_toBottomOf="@id/bt_teacher_one"
+                app:txt="课程推荐" />
+
+
+            <RadioGroup
+                android:id="@+id/group"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="@id/lg"
+                app:layout_constraintRight_toRightOf="@id/rg"
+                app:layout_constraintTop_toBottomOf="@id/bt_classing_select">
+
+                <RadioButton
+                    android:id="@+id/r1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/classing_radio"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="创造力"
+                    android:textColor="@color/radio"
+                    android:textSize="@dimen/scTitle" />
+
+                <RadioButton
+                    android:id="@+id/r2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/classing_radio"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="家庭教育"
+                    android:textColor="@color/radio"
+                    android:textSize="@dimen/scTitle" />
+
+                <RadioButton
+                    android:id="@+id/r3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/classing_radio"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="养成教育"
+                    android:textColor="@color/radio"
+                    android:textSize="@dimen/scTitle" />
+
+                <RadioButton
+                    android:id="@+id/r4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/classing_radio"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="健康教育"
+                    android:textColor="@color/radio"
+                    android:textSize="@dimen/scTitle" />
+
+                <RadioButton
+                    android:id="@+id/r5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/classing_radio"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="拓展教育"
+                    android:textColor="@color/radio"
+                    android:textSize="@dimen/scTitle" />
+            </RadioGroup>
+
+            <ImageView
+                android:id="@+id/xiaoren"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:src="@mipmap/xiaoren"
+                app:layout_constraintLeft_toLeftOf="@id/lg"
+                app:layout_constraintTop_toBottomOf="@id/bt_classing_select" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/class_rec"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintLeft_toRightOf="@id/lrg"
+                app:layout_constraintRight_toLeftOf="@id/rrg"
+                app:layout_constraintTop_toBottomOf="@id/group" />
+
+
+            <TextView
+                android:id="@+id/tv_profession"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="在线讲评"
+                android:textColor="@color/subhead"
+                android:textSize="@dimen/big"
+
+                app:layout_constraintLeft_toRightOf="@id/lg"
+                app:layout_constraintRight_toLeftOf="@id/rg"
+                app:layout_constraintTop_toBottomOf="@id/class_rec" />
+
+            <com.tutuya.tck.diyview.HomeTitle
+                android:id="@+id/profession_go"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintLeft_toRightOf="@id/lg"
+                app:layout_constraintRight_toLeftOf="@id/rg"
+                app:layout_constraintTop_toBottomOf="@+id/tv_profession"
+                app:txt="专家讲评" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/profession_rec"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:dsv_orientation="horizontal"
+                app:layout_constraintLeft_toRightOf="@id/lrg"
+                app:layout_constraintRight_toLeftOf="@id/rrg"
+                app:layout_constraintTop_toBottomOf="@id/profession_go" />
+
+            <com.tutuya.tck.diyview.HomeTitle
+                android:id="@+id/good_tell"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintLeft_toRightOf="@id/lg"
+                app:layout_constraintRight_toLeftOf="@id/rg"
+                app:layout_constraintTop_toBottomOf="@+id/profession_rec"
+                app:txt="推荐讲评" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/good_tell_rec"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintLeft_toRightOf="@id/lrg"
+                app:layout_constraintRight_toLeftOf="@id/rrg"
+                app:layout_constraintTop_toBottomOf="@id/good_tell" />
+
+            <TextView
+                android:id="@+id/tv_mall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="在线商城"
+                android:textColor="@color/subhead"
+                android:textSize="@dimen/big"
+                app:layout_constraintLeft_toRightOf="@id/lg"
+                app:layout_constraintRight_toLeftOf="@id/rg"
+                app:layout_constraintTop_toBottomOf="@id/good_tell_rec" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/mall_rec"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:layout_constraintLeft_toRightOf="@id/lrg"
+                app:layout_constraintRight_toLeftOf="@id/rrg"
+                app:layout_constraintTop_toBottomOf="@id/tv_mall" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/lg"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.04" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/rg"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.96" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/lrg"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.06" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/rrg"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.94" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </com.tutuya.tck.diyview.SmartScrollView>
+</android.support.v4.widget.SwipeRefreshLayout>

@@ -1,0 +1,17 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+
+
+
+    <!--文字-->
+    //30号子
+    <dimen name="veryBig">20sp</dimen>
+    //26号子
+    <dimen name="big">18sp</dimen>
+    //24号子
+    <dimen name="bigTitle">16sp</dimen>
+    //18号子
+    <dimen name="scTitle">12sp</dimen>
+    //15号子
+    <dimen name="small">10sp</dimen>
+</resources>

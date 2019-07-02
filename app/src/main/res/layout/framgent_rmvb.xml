@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:background="@color/colorWhite"
+        android:layout_height="match_parent"
+        tools:ignore="MissingConstraints">
+
+        <com.tutuya.tck.diyview.HomeTitle
+            android:layout_marginTop="20dp"
+            android:id="@+id/bt_grid"
+            app:txtColor="@color/subhead"
+            android:layout_width="0dp"
+            app:txtSize="@dimen/bigTitle"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@id/lg"
+            app:layout_constraintRight_toRightOf="@id/rg"
+            app:layout_constraintTop_toTopOf="parent"
+            app:txt="共七个教学视频" />
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_marginTop="5dp"
+            android:id="@+id/grid_rec"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@id/lg"
+            app:layout_constraintRight_toRightOf="@id/rg"
+            app:layout_constraintTop_toBottomOf="@id/bt_grid" />
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:textSize="@dimen/bigTitle"
+            android:textColor="@color/subhead"
+            android:id="@+id/title_hrec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="推荐教学视频"
+            app:layout_constraintLeft_toLeftOf="@id/lg"
+            app:layout_constraintTop_toBottomOf="@id/grid_rec" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/hot_rec"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@id/lg"
+            app:layout_constraintRight_toRightOf="@id/rg"
+            app:layout_constraintTop_toBottomOf="@id/title_hrec" />
+        <CheckBox
+            android:padding="10dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@id/hot_rec"
+            android:id="@+id/ck_heart"
+            style="@style/heart"
+            android:text="收藏"
+            app:layout_constraintLeft_toLeftOf="@id/lg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textSize="@dimen/bigTitle"
+            app:layout_constraintTop_toTopOf="@id/ck_heart"
+            app:layout_constraintBottom_toBottomOf="@id/ck_heart"
+            android:id="@+id/bt_question"
+            android:background="@drawable/color_gm"
+            android:text="趣味问答"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:gravity="center"
+            android:textColor="@color/colorWhite"
+            app:layout_constraintRight_toLeftOf="@id/rg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <android.support.constraint.Guideline
+            android:id="@+id/lg"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.04" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/rg"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.96" />
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
